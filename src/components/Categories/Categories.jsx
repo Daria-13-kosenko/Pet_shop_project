@@ -22,7 +22,7 @@ function Categories({ limit }) {
       <div className={styles.catigories}>
         <h1>Categories</h1>
         <div className={styles.line}></div>
-        <NavLink to="/categories">
+        <NavLink to="/categories/:id">
           <button className={styles.btnCategories}>All categories</button>
         </NavLink>
       </div>
@@ -32,7 +32,7 @@ function Categories({ limit }) {
             key={category.id}
             id={category.id}
             title={category.title}
-            onClick={() => navigate(`/categories/${category.id}`)}
+            onClick={() => navigate('/categories')}
           />
         ))}
       </div>
