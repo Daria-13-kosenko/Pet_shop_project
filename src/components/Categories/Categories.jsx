@@ -21,11 +21,10 @@ function Categories({ limit }) {
     <div>
       <div className={styles.catigories}>
         <h1>Categories</h1>
-        <div>
-          <NavLink to="/categories">
-            <button className={styles.btnCategories}>All categories</button>
-          </NavLink>
-        </div>
+        <div className={styles.line}></div>
+        <NavLink to="/categories">
+          <button className={styles.btnCategories}>All categories</button>
+        </NavLink>
       </div>
       <div className={styles.grid}>
         {visible.map((category) => (
