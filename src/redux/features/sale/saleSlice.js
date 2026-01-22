@@ -30,17 +30,13 @@ const saleSlice = createSlice({
       })
       .addCase(fetchSaleProducts.fulfilled, (state, action) => {
         state.loading = false
-
         const data = Array.isArray(action.payload)
           ? action.payload
           : (action.payload?.data ?? [])
+
         state.items = data.filter((p) => {
-          return (
-            p?.discount_price ||
-            p?.discount_price ||
-            p?.discount ||
-            p?.sale === true
-          )
+          const dp = p?.discont_price
+          return dp !== null && dp !== undefined && Number(dp) > 0
         })
       })
       .addCase(fetchSaleProducts.rejected, (state, action) => {

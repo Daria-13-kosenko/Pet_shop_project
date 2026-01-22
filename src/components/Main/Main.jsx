@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import Categories from '../Categories/CategoryPage'
-import Sales from '../Sales/SalePage'
+import SaleSection from '../Sales/SaleSection'
 import Registr_sale from '../Registr_sale/RegistrSale'
 import styles from './Main.module.css'
 import Pets_hero from '../../assets/img/pets_hero.svg'
@@ -21,7 +21,7 @@ function Main() {
       </div>
       <Categories />
       <Registr_sale />
-      <Sales />
+      <SaleSection />
     </div>
   )
 }

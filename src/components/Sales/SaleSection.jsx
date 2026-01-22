@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchSaleProducts } from '../../redux/features/sale/saleSlice'
 import { NavLink } from 'react-router-dom'
 import styles from './SaleSection.module.css'
+import ProductSale from '../Sales/ProductSale'
 
 function SaleSection() {
   const dispatch = useDispatch()
@@ -24,20 +25,16 @@ function SaleSection() {
 
   return (
     <section className={styles.sale}>
-      <div>
-        {' '}
+      <div className={styles.saleTitle}>
         <h2>Sale</h2>
         <div className={styles.line}></div>
         <NavLink to="/sales">
           <button className={styles.btnSale}>All sales</button>
         </NavLink>
       </div>
-      <div>
+      <div className={styles.gridSale}>
         {top4.map((p) => (
-          <div key={p.id}>
-            {/*ProductCard product={p}/> */}
-            <pre>{p.title}</pre>
-          </div>
+          <ProductSale key={p.id} product={p} />
         ))}
       </div>
     </section>

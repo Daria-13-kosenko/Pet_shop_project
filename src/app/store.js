@@ -4,6 +4,7 @@ import categoriesReducer from '../redux/features/categories/categoriesSlice'
 import productsReducer from '../redux/features/products/productSlice'
 import cartReducer from '../redux/features/cart/cartSlice'
 import orderReducer from '../redux/features/order/orderSlice'
+import saleReducer from '../redux/features/sale/saleSlice'
 
 export const store = configureStore({
   reducer: {
@@ -11,5 +12,6 @@ export const store = configureStore({
     products: productsReducer,
     cart: cartReducer,
     order: orderReducer,
+    sale: saleReducer,
   },
 })

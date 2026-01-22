@@ -1,11 +1,20 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+.saleTitle {
+  max-width: 85em;
+  width: 100%;
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 .sale {
   max-width: 85em;
   width: 100%;
   margin: 0 2.5em;
   padding: 2em 1em;
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 .sale h2 {
   font-size: 64px;
@@ -16,6 +25,7 @@
   grid-template-columns: repeat(4, 1fr);
   width: 85em;
   margin: 0 2.5em;
+  font-family: 'Montserrat', sans-serif;
 }
 .line {
   width: 16em;
