@@ -1,0 +1,29 @@
+import { useNavigate } from 'react-router-dom'
+import Categories from '../Categories/CategoryPage'
+import Sales from '../Sales/SalePage'
+import Registr_sale from '../Registr_sale/RegistrSale'
+import styles from './Main.module.css'
+import Pets_hero from '../../assets/img/pets_hero.svg'
+
+function Main() {
+  const navigate = useNavigate()
+
+  return (
+    <div className={styles.main}>
+      <div className={styles.overlay}>
+        <h1>
+          Amazing Discounts <br />
+          on Pets Products!
+        </h1>
+        <button className={styles.button} onClick={() => navigate('/products')}>
+          Check out
+        </button>
+      </div>
+      <Categories />
+      <Registr_sale />
+      <Sales />
+    </div>
+  )
+}
+
+export default Main
